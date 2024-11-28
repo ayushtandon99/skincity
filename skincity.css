@@ -27,7 +27,7 @@ body {
 }
 
 header {
-    background-color: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(200,230,225,0.6));
+    background-color: var(--secondary-color);
     padding: 20px 0;
     position: fixed;
     width: 100%;
@@ -36,7 +36,7 @@ header {
 }
 
 header.scrolled {
-    background-color: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(200,230,225,0.6));
+    background-color: var(--secondary-color);
 }
 
 nav {
