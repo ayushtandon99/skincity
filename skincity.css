@@ -567,7 +567,7 @@ footer {
         font-size: 24px;
         background: none;
         border: none;
-        color: var(--primary-color);
+        color: var(--light-text);
         cursor: pointer;
         position: absolute;
         right: 20px;

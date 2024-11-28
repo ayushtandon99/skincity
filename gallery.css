@@ -17,7 +17,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--secondary-color);
+    background-color: var(--light-text);
     color: var(--text-color);
     line-height: 1.6;
 }
@@ -29,9 +29,9 @@ body {
     padding: 0 20px;
 }
 
-
 header {
-    background-color: var(--secondary-color);
+    /* background-color: rgba(218,249,216,0.8); */
+    background: linear-gradient(135deg, rgba(218,249,216,0.8), rgba(123, 25, 158, 0.511));
     padding: 20px 0;
     position: fixed;
     width: 100%;
@@ -40,18 +40,10 @@ header {
 }
 
 header.scrolled {
-    background-color: var(--secondary-color);
-}
+    /* background-color: var(--secondary-color); */
+    background: linear-gradient(135deg, rgba(218,249,216,0.8), rgba(123, 25, 158, 0.509));
 
-/* Navigation */
-/* .navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-} */
+}
 
 nav {
     display: flex;
@@ -88,17 +80,17 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--light-text);
     font-weight: 400;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: var(--light-text);
+    color: var(--primary-color);
 }
 
 .hero {
-    background-image: url('images/copright-free/ayurveda_massage.jpg');
+    background-image: url('Images/copyright_free/cover3.jpg');
     background-size: cover;
     background-position: center;
     height: 70vh;
@@ -175,42 +167,20 @@ nav {
     font-size: 36px;
     text-align: center;
     margin-bottom: 40px;
-    color: var(--primary-color);
-}
-
-.about {
-    background-color: #fff;
-}
-
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
-
-.about-image {
-    flex: 1;
-}
-
-.about-image img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.about-text {
-    flex: 1;
+    color: var(--light-text);
 }
 
 
 /* Gallery Section */
 .gallery-section {
     padding: 50px 0;
+    /* background: linear-gradient(135deg, rgba(218,249,216,0.8), rgba(123, 25, 158, 0.511)); */
 }
 
 .section-title {
     text-align: center;
     margin-bottom: 40px;
-    color: #2c3e50;
+    color: var(--text-color);
 }
 
 .gallery-grid {
@@ -220,7 +190,8 @@ nav {
 }
 
 .gallery-item {
-    background-color: #fff;
+    /* background-color: #fff; */
+    background: linear-gradient(30deg, rgba(218,249,216,0.8), rgba(123, 25, 158, 0.511));
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -293,7 +264,8 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.8);
+    /* background-color: rgba(0,0,0,0.8); */
+    background: linear-gradient(135deg, rgba(218,249,216,0.8), rgba(123, 25, 158, 0.511));
     justify-content: center;
     align-items: center;
 }
@@ -352,7 +324,8 @@ nav {
 
 
 .contact {
-    background-color: var(--secondary-color);
+    /* background-color: var(--secondary-color); */
+    background: linear-gradient(135deg, rgba(218,249,216,0.8), rgba(123, 25, 158, 0.511));
     padding: 80px 0;
 }
 
@@ -498,7 +471,7 @@ footer {
         font-size: 24px;
         background: none;
         border: none;
-        color: var(--primary-color);
+        color: var(--light-text);
         cursor: pointer;
         position: absolute;
         right: 20px;
