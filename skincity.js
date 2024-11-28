@@ -6,9 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
 
-    const productTabs = document.querySelectorAll('.product-tab');
-    const productInfos = document.querySelectorAll('.product-info');
-
     const logo = document.querySelector('.logo img');
 
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -21,47 +18,47 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = document.querySelector('.carousel-button.next');
     let currentSlide = 0;
 
-    // const slidesGallery = document.querySelectorAll('.gallery-carousel-slide');
-    // const prevButtonGallery = document.querySelector('.gallery-prev');
-    // const nextButtonGallery = document.querySelector('.gallery-next');
-    // let currentSlideGallery = 0;
+    const slidesGallery = document.querySelectorAll('.gallery-carousel-slide');
+    const prevButtonGallery = document.querySelector('.gallery-prev');
+    const nextButtonGallery = document.querySelector('.gallery-next');
+    let currentSlideGallery = 0;
 
 
     //Gallery
-    // function showSlideGallery(index) {
-    //     // Remove active class from all slides
-    //     slidesGallery.forEach(slide => slide.classList.remove('active'));
+    function showSlideGallery(index) {
+        // Remove active class from all slides
+        slidesGallery.forEach(slide => slide.classList.remove('active'));
 
-    //     // Handle wrapping around when reaching end or beginning
-    //     if (index >= slidesGallery.length) {
-    //         currentSlideGallery = 0;
-    //     } else if (index < 0) {
-    //         currentSlideGallery = slidesGallery.length - 1;
-    //     } else {
-    //         currentSlideGallery = index;
-    //     }
+        // Handle wrapping around when reaching end or beginning
+        if (index >= slidesGallery.length) {
+            currentSlideGallery = 0;
+        } else if (index < 0) {
+            currentSlideGallery = slidesGallery.length - 1;
+        } else {
+            currentSlideGallery = index;
+        }
 
-    //     // Add active class to current slide
-    //     slidesGallery[currentSlideGallery].classList.add('active');
-    // }
+        // Add active class to current slide
+        slidesGallery[currentSlideGallery].classList.add('active');
+    }
 
-    // // Initial slide setup
-    // showSlideGallery(currentSlideGallery);
+    // Initial slide setup
+    showSlideGallery(currentSlideGallery);
 
-    // // Next slide functionality
-    // nextButtonGallery.addEventListener('click', () => {
-    //     showSlideGallery(currentSlideGallery + 1);
-    // });
+    // Next slide functionality
+    nextButtonGallery.addEventListener('click', () => {
+        showSlideGallery(currentSlideGallery + 1);
+    });
 
-    // // Previous slide functionality
-    // prevButtonGallery.addEventListener('click', () => {
-    //     showSlideGallery(currentSlideGallery - 1);
-    // });
+    // Previous slide functionality
+    prevButtonGallery.addEventListener('click', () => {
+        showSlideGallery(currentSlideGallery - 1);
+    });
 
-    // // Optional: Auto-advance slides every 5 seconds
-    // setInterval(() => {
-    //     showSlideGallery(currentSlideGallery + 1);
-    // }, 5000);
+    // Optional: Auto-advance slides every 5 seconds
+    setInterval(() => {
+        showSlideGallery(currentSlideGallery + 1);
+    }, 5000);
 
 
 
@@ -217,8 +214,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
-
     // Check if we're on the services page
     if (window.location.pathname.includes('services.html')) {
         // Scroll to the correct service if coming from another page
@@ -240,8 +235,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-
-
     // Tab functionality for services
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -254,20 +247,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById(tabId).classList.add('active');
         });
     });
-
-    // Tab functionality for products
-    productTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const productId = tab.getAttribute('data-product');
-            
-            productTabs.forEach(t => t.classList.remove('active'));
-            productInfos.forEach(info => info.classList.remove('active'));
-            
-            tab.classList.add('active');
-            document.getElementById(productId).classList.add('active');
-        });
-    });
-
 
     // Intersection Observer for fade-in effect
     const observerOptions = {

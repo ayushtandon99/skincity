@@ -168,7 +168,6 @@ nav {
 .slide-content h1 {
     font-size: 48px;
     margin-bottom: 20px;
-    /*  */
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -177,7 +176,6 @@ nav {
 .slide-content p {
     font-size: 24px;
     margin-bottom: 30px;
-    /*  */
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
@@ -312,80 +310,95 @@ nav {
     color: var(--primary-color);
 }
 
-/* Products Section Styles */
-.products {
-    background-color: var(--light-text);
-    padding: 80px 0;
+/* Gallery Carousel Styles */
+.gallery-carousel {
+    position: relative;
+    padding: 50px 0;
+    background-color: #f9f9f9;
 }
 
-.products-content {
+.gallery-carousel-wrapper {
     display: flex;
-    gap: 30px;
-}
-
-.product-tabs {
-    display: flex;
-    flex-direction: column;
-    min-width: 200px;
-}
-
-.product-tab {
-    background-color: transparent;
-    border: none;
-    text-align: left;
-    padding: 15px 20px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--primary-color);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-left: 3px solid transparent;
-}
-
-.product-tab.active {
-    background-color: #fffaf3;
-    border-left-color: var(--essentia-primary-color);
-    color: var(--essentia-secondary-color);
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-
-}
-
-.product-details {
-    flex: 1;
-    background-color: #fffaf3;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.product-info {
-    display: none;
-}
-
-.product-info.active {
-    display: block;
-}
-
-.product-image {
+    align-items: center;
+    justify-content: center;
+    position: relative;
     width: 100%;
-    max-width: 300px;
-    height: auto;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.gallery-carousel-slide {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+.gallery-carousel-slide.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.gallery-carousel-slide img {
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.product-info h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: var(--essentia-primary-color);
+.carousel-caption {
+    margin-top: 15px;
+    text-align: center;
 }
 
-.product-history,
-.product-description {
-    margin-bottom: 15px;
-    line-height: 1.6;
+.carousel-caption h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.carousel-caption p {
+    color: #666;
+}
+
+.gallery-prev, 
+.gallery-next {
+    background-color: rgba(74, 74, 74, 0.7);
+    color: white;
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.gallery-prev {
+    left: 0;
+}
+
+.gallery-next {
+    right: 0;
+}
+
+.gallery-prev:hover, 
+.gallery-next:hover {
+    background-color: rgba(74, 74, 74, 0.9);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Teestimonials section*/
@@ -609,27 +622,11 @@ footer {
         margin-bottom: 15px;
     }
 
-    .products-content {
-        flex-direction: column;
-    }
-
-    .product-tabs {
-        flex-direction: row;
-        overflow-x: auto;
-        padding-bottom: 10px;
-    }
-
-    .product-tab {
-        flex: 0 0 auto;
-        border-left: none;
-        border-bottom: 3px solid transparent;
-    }
-
-    .product-tab.active {
-        border-left-color: transparent;
-        border-bottom-color: var(--essentia-primary-color);
-        color: var(--essentia-secondary-color);
-        border-radius: 10px;
+    /* Gallery responsiveness */
+    .gallery-prev,
+    .gallery-next {
+        padding: 10px 8px;
+        font-size: 0.9em;
     }
 }
 
@@ -676,13 +673,6 @@ footer {
         font-size: 14px;
     }
 
-    .product-tabs {
-        font-size: 16px;
-    }
-
-    .product-details {
-        padding: 20px;
-    }
 }
 
 @media (max-width: 992px) {
