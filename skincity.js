@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Optional: Auto-advance slides every 5 seconds
     setInterval(() => {
         showSlideGallery(currentSlideGallery + 1);
-    }, 5000);
+    }, 7000);
 
 
 
