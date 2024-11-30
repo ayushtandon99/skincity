@@ -7,27 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const mobileMenu = document.querySelector('.mobile-menu');
     const closeMenuBtn = document.querySelector('.close-menu-btn');
-    
-    
-    // const galleryItems = document.querySelectorAll('.gallery-item');
-    // const lightbox = document.querySelector('.lightbox');
-    // const lightboxImg = lightbox.querySelector('img');
-    // const lightboxClose = lightbox.querySelector('.lightbox-close');
-    // const lightboxDescription = lightbox.querySelector('.lightbox-description');
 
     const galleryItems = document.querySelectorAll('.gallery-item');
     const lightbox = document.querySelector('.lightbox');
     const lightboxImg = lightbox.querySelector('.lightbox-content img');
     const lightboxClose = lightbox.querySelector('.lightbox-close');
-
-    // Mobile menu functionality
-    // mobileMenuBtn.addEventListener('click', () => {
-    //     mobileMenu.classList.add('active');
-    // });
-
-    // closeMenuBtn.addEventListener('click', () => {
-    //     mobileMenu.classList.remove('active');
-    // });
 
     // Mobile menu functionality
     if (mobileMenuBtn && mobileMenu) {
@@ -100,37 +84,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-     
-
-
-
-    // galleryItems.forEach(item => {
-    //     item.addEventListener('click', () => {
-    //         const beforeImg = item.dataset.before;
-    //         const afterImg = item.dataset.after;
-    //         const title = item.querySelector('h3').textContent;
-    //         const description = item.querySelector('p').textContent;
-
-    //         // Create a before/after comparison image
-    //         lightboxImg.src = beforeImg;
-    //         lightboxDescription.textContent = `${title} - ${description}`;
-    //         lightbox.style.display = 'flex';
-
-    //         // Optional: Add image swapping on click
-    //         lightboxImg.addEventListener('click', function() {
-    //             this.src = this.src === beforeImg ? afterImg : beforeImg;
-    //         });
-    //     });
-    // });
-
-    // lightboxClose.addEventListener('click', () => {
-    //     lightbox.style.display = 'none';
-    // });
-
-    // // Close lightbox when clicking outside the image
-    // lightbox.addEventListener('click', (e) => {
-    //     if (e.target === lightbox) {
-    //         lightbox.style.display = 'none';
-    //     }
-    // });
 });
