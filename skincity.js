@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
             if (logo) {
-                logo.style.maxHeight = '80px'; // Adjust this value as needed
+                logo.style.maxHeight = '50px'; // Adjust this value as needed
             }
         } else {
             header.classList.remove('scrolled');
