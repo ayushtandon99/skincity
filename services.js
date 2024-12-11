@@ -42,12 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
             if (logo) {
-                logo.style.maxHeight = '50px'; // Adjust this value as needed
+                logo.style.maxHeight = '40px'; // Adjust this value as needed
             }
         } else {
             header.classList.remove('scrolled');
             if (logo) {
-                logo.style.maxHeight = '90px'; // Adjust this value as needed
+                logo.style.maxHeight = '50px'; // Adjust this value as needed
             }
         }
     });
@@ -87,24 +87,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Intersection Observer for fade-in effect
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
+    // const observerOptions = {
+    //     root: null,
+    //     rootMargin: '0px',
+    //     threshold: 0.1
+    // };
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
+    // const observer = new IntersectionObserver((entries, observer) => {
+    //     entries.forEach(entry => {
+    //         if (entry.isIntersecting) {
+    //             entry.target.classList.add('fade-in');
+    //             observer.unobserve(entry.target);
+    //         }
+    //     });
+    // }, observerOptions);
 
-    sections.forEach(section => {
-        section.classList.add('fade-in-section');
-        observer.observe(section);
-    });
+    // sections.forEach(section => {
+    //     section.classList.add('fade-in-section');
+    //     observer.observe(section);
+    // });
 
 });

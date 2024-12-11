@@ -59,7 +59,7 @@ nav {
 }
 
 .logo img {
-    max-height: 100px;
+    max-height: 50px;
     width: auto;
     transition: max-height 0.3s ease;
 }

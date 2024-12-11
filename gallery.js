@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             header.classList.remove('scrolled');
             if (logo) {
-                logo.style.maxHeight = '90px'; // Adjust this value as needed
+                logo.style.maxHeight = '60px'; // Adjust this value as needed
             }
         }
     });
